@@ -19,7 +19,7 @@
  * and will now be available in UserEditCtrl
  *
  */
-(function (window, angular, undefined) {
+(function (window, angular) {
     'use strict';
 
     angular.module('ui-router-modal', [

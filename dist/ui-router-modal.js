@@ -1,8 +1,27 @@
-/** ui-router-modal - v0.0.0 - 2016-03-18
+/** ui-router-modal - v0.0.1 - 2016-03-18
 Add parents resolve capability to modalStateProvider.
 (taken from https://lingohub.com/blog/2015/06/bootstrap-modal-window-custom-url-angularjs/)
 */
-(function (window, angular, undefined) {
+/**
+ * Usage
+ *
+ * Include ['ui-router-modal'] in modules
+ * Inject modalStateProvider in config
+ * Declare state with
+ *
+ * modalStateProvider.state('user.edit', {
+ *      url: '/edit'
+ *      templateUrl: 'user/edit.html',
+ *      controller: 'UserEditCtrl',
+ *      controllerAs: 'vm',
+ *      modalResolve: ['User'] // From parent
+ * });
+ *
+ * User is considered to be a parent state resolved dependencies
+ * and will now be available in UserEditCtrl
+ *
+ */
+(function (window, angular) {
     'use strict';
 
     angular.module('ui-router-modal', [

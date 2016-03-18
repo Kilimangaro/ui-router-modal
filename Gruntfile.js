@@ -1,5 +1,8 @@
 module.exports = function (grunt) {
     'use strict';
+
+    require('load-grunt-tasks')(grunt);
+
     // Project configuration
     grunt.initConfig({
         // Metadata
@@ -46,7 +49,7 @@ module.exports = function (grunt) {
                 src: 'gruntfile.js'
             },
             lib_test: {
-                src: ['src/**/*.js', 'test/**/*.js']
+                src: ['src/**/*.js']
             }
         },
         watch: {
@@ -58,17 +61,26 @@ module.exports = function (grunt) {
                 files: '<%= jshint.lib_test.src %>',
                 tasks: ['jshint:lib_test', 'nodeunit']
             }
+        },
+
+        karma: {
+            options: {
+                configFile: 'karma.conf.js'
+                // Serve and load angular files using regular Karma mode
+                //browsers: [ grunt.option('browser') || 'PhantomJS' ]
+            },
+            // Same as karma:base
+            unit: {
+            }
         }
     });
 
-    // These plugins provide necessary tasks
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+    grunt.registerTask('default', ['build']);
+
+    grunt.registerTask('build', ['jshint', 'concat', 'uglify']);
+
+    grunt.registerTask('test', ['build', 'karma:unit']);
 };
 

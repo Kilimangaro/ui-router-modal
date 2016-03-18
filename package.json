@@ -1,14 +1,37 @@
 {
   "name": "ui-router-modal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Add parents resolve capability to modalStateProvider.\n(taken from https://lingohub.com/blog/2015/06/bootstrap-modal-window-custom-url-angularjs/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kilimangaro/ui-router-modal.git"
+  },
+  "license": "MIT",
   "dependencies": {},
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
   "devDependencies": {
+    "chai": "^3.5.0",
     "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-nodeunit": "*"
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-karma": "^0.12.2",
+    "grunt-mocha": "^0.4.15",
+    "karma": "^0.13.22",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sinon-chai": "^1.2.0",
+    "load-grunt-tasks": "^3.4.1",
+    "lolex": "^1.4.0",
+    "mocha": "^2.4.5",
+    "phantomjs": "^2.1.3",
+    "phantomjs-prebuilt": "^2.1.5",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
   }
 }
