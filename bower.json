@@ -1,0 +1,21 @@
+{
+  "name": "ui-router-modal",
+  "description": "Modal state profider for ui-router",
+  "main": "dist/ui-router-modal.js",
+  "authors": [
+    "Rémy <remy.dufour@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular", "ui-bootstrap", "ui-router", "modal"
+  ],
+  "moduleType": [],
+  "homepage": "remydufour.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
